@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TallerGIT</string>
+    <string name="campo_vacio">El campo esta vacío</string>
+    <string name="error_correo">Error en el correo</string>
 </resources>
