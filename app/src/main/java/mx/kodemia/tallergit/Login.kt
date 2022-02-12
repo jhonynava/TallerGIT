@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
@@ -28,8 +27,8 @@ class Login : AppCompatActivity() {
         btnIniciarSesion = findViewById(R.id.btn_login_ingresar)
         tilLoginUsuario = findViewById(R.id.til_login_usuario)
         tilLoginContrasena = findViewById(R.id.til_login_contrasena)
-        tietLoginUsuario = findViewById(R.id.tiet_usuario)
-        tietLoginContrasena = findViewById(R.id.tiet_contrasena)
+        tietLoginUsuario = findViewById(R.id.tiet_user)
+        tietLoginContrasena = findViewById(R.id.tiet_password)
         textoUsuario = ""
         textoPsw = ""
     }
