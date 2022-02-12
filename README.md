@@ -62,3 +62,5 @@ Realizar Merge
 git merge nombre_rama_a_mezclar
 
 Este cambio proviene de rama Sprint1
+
+Cambio hacia la rama master con pull request
