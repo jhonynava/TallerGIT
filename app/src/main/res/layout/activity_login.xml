@@ -53,6 +53,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_usuario"
                     android:id="@+id/tiet_user"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -79,6 +80,7 @@
                 app:layout_constraintTop_toBottomOf="@id/til_login_usuario">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_contrasena"
                     android:id="@+id/tiet_password"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -91,6 +93,9 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/btn_login_ingresar"
@@ -120,3 +125,4 @@
         app:srcCompat="@drawable/ic_android_black_24dp_white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
