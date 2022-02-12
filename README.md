@@ -54,6 +54,7 @@ git branch -a
 Cambiarnos de rama
 git checkout nombre_rama
 
+
 Borrar una rama
 git branch -d nombre_rama
 
@@ -62,3 +63,6 @@ Realizar Merge
 git merge nombre_rama_a_mezclar
 
 Esto es un ejemplo de resolucion de conflictos
+
+<!-- Agregar su nombre debajo (PR) -->
+jose somilleda
