@@ -10,18 +10,28 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
 class Login : AppCompatActivity() {
-    private var btnIniciarSesion: Button = findViewById(R.id.btn_login_ingresar)
-    private var tilLoginUsuario: TextInputLayout = findViewById(R.id.til_login_usuario)
-    private var tilLoginContrasena: TextInputLayout = findViewById(R.id.til_login_contrasena)
-    private var tietLoginUsuario: TextInputEditText = findViewById(R.id.tiet_usuario)
-    private var tietLoginContrasena: TextInputEditText = findViewById(R.id.tiet_contrasena)
-    private var textoUsuario: String = ""
-    private var textoPsw: String = ""
+    private lateinit var btnIniciarSesion: Button
+    private lateinit var tilLoginUsuario: TextInputLayout
+    private lateinit var tilLoginContrasena: TextInputLayout
+    private lateinit var tietLoginUsuario: TextInputEditText
+    private lateinit var tietLoginContrasena: TextInputEditText
+    private lateinit var textoUsuario: String
+    private lateinit var textoPsw: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        init()
         iniciarSesion()
+    }
+    fun init(){
+        btnIniciarSesion = findViewById(R.id.btn_login_ingresar)
+        tilLoginUsuario = findViewById(R.id.til_login_usuario)
+        tilLoginContrasena = findViewById(R.id.til_login_contrasena)
+        tietLoginUsuario = findViewById(R.id.tiet_usuario)
+        tietLoginContrasena = findViewById(R.id.tiet_contrasena)
+        textoUsuario = ""
+        textoPsw = ""
     }
 
     fun iniciarSesion(){
