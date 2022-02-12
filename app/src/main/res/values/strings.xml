@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TallerGIT</string>
+    <string name="require_field">Campo requerido</string>
 </resources>
