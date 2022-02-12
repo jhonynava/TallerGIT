@@ -62,5 +62,7 @@ Nota: Antes de realizar el merge te debes cambiar a la rama principal o la quier
 Realizar Merge
 git merge nombre_rama_a_mezclar
 
+Esto es un ejemplo de resolucion de conflictos
+
 <!-- Agregar su nombre debajo (PR) -->
 jose somilleda
