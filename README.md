@@ -60,3 +60,5 @@ git branch -d nombre_rama
 Nota: Antes de realizar el merge te debes cambiar a la rama principal o la quieras fusionar
 Realizar Merge
 git merge nombre_rama_a_mezclar
+
+Esto es un ejemplo de resolucion de conflictos
