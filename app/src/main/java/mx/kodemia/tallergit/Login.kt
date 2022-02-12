@@ -1,45 +1,74 @@
 package mx.kodemia.tallergit
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
+import android.widget.Button
+import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
 class Login : AppCompatActivity() {
-
-    lateinit var til_login:TextInputLayout
-    lateinit var tiet_login:TextInputEditText
-    lateinit var til_pass:TextInputLayout
-    lateinit var tiet_pass:TextInputEditText
-
+    private lateinit var btnIniciarSesion: Button
+    private lateinit var tilLoginUsuario: TextInputLayout
+    private lateinit var tilLoginContrasena: TextInputLayout
+    private lateinit var tietLoginUsuario: TextInputEditText
+    private lateinit var tietLoginContrasena: TextInputEditText
+    private lateinit var textoUsuario: String
+    private lateinit var textoPsw: String
+  
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        til_login = findViewById(R.id.til_login_usuario)
-        tiet_login = findViewById(R.id.tiet_user)
-        til_pass = findViewById(R.id.til_login_contrasena)
-        tiet_pass = findViewById(R.id.tiet_password)
-
-        setValidationListener(til_login, tiet_login)
-        setValidationListener(til_pass, tiet_pass)
+        init()
+        iniciarSesion()
+    }
+    fun init(){
+        btnIniciarSesion = findViewById(R.id.btn_login_ingresar)
+        tilLoginUsuario = findViewById(R.id.til_login_usuario)
+        tilLoginContrasena = findViewById(R.id.til_login_contrasena)
+        tietLoginUsuario = findViewById(R.id.tiet_user)
+        tietLoginContrasena = findViewById(R.id.tiet_password)
+        textoUsuario = ""
+        textoPsw = ""
     }
 
-    private fun setValidationListener(til: TextInputLayout, tiet: TextInputEditText) {
-        tiet.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
-
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
-
-            override fun afterTextChanged(txt: Editable?) {
-                if (txt.toString().isEmpty()) {
-                    til.error = applicationContext.resources.getString(R.string.require_field)
-                } else {
-                    til.isErrorEnabled = false
-                    til.error = ""
+    fun iniciarSesion(){
+        btnIniciarSesion.setOnClickListener {
+            textoUsuario = tilLoginUsuario.editText?.text?.trim().toString()
+            textoPsw = tilLoginContrasena.editText?.text?.trim().toString()
+            if(textoUsuario.isNotEmpty() && textoUsuario.isNotBlank() &&
+                textoPsw.isNotEmpty() && textoPsw.isNotBlank()){
+                if (validarCorreo() && validarContrasena()){
+                    startActivity(Intent(this,MainActivity::class.java))
                 }
+            }else{
+                Toast.makeText(this, R.string.campo_vacio, Toast.LENGTH_LONG).show()
             }
-        })
+        }
+    }
+    private fun validarCorreo(): Boolean{
+        return if(tietLoginUsuario.text.toString().trim().isEmpty()){
+            tietLoginUsuario.error = getString(R.string.campo_vacio)
+            false
+        }else{
+            if (android.util.Patterns.EMAIL_ADDRESS.matcher(tietLoginUsuario.text.toString()).matches()){
+                tilLoginUsuario.isErrorEnabled = false
+                true
+            }else{
+                tilLoginUsuario.error = getString(R.string.error_correo)
+                false
+            }
+        }
+    }
+
+    private fun validarContrasena(): Boolean{
+        return if(tietLoginContrasena.text.toString().trim().isEmpty()){
+            tietLoginContrasena.error = getString(R.string.campo_vacio)
+            false
+        }else{
+            true
+        }
+
     }
 }
