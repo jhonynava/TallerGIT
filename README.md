@@ -39,4 +39,9 @@ git pull nombre_repositorio nombre_rama (Actualizar la rama especificada)
 git fetch nombre_repositorio (Actualizar cambios sin fusionar los locales)
 git fetch --all --prune (Actualizar el repositorio y borar ramas que ya no existen)
 
-git pull origin
+Subir cambios en el repositorio remoto
+git push nombre_repositorio nombre_rama
+
+Crear Rama o branch
+git branch nombre_rama
+
