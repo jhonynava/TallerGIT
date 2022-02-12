@@ -53,3 +53,7 @@ git branch -a
 
 Cambiarnos de rama
 git checkout nombre_rama
+
+
+<!-- Agregar su nombre debajo (PR) -->
+jose somilleda
