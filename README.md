@@ -42,6 +42,9 @@ git fetch --all --prune (Actualizar el repositorio y borar ramas que ya no exist
 Subir cambios en el repositorio remoto
 git push nombre_repositorio nombre_rama
 
+Cambiarnos/Agregar una rama remota
+git checkout --track nombre_repositorio/nombre_rama
+
 Crear Rama o branch
 git branch nombre_rama
 
