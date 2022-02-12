@@ -53,3 +53,7 @@ git branch -a
 
 Cambiarnos de rama
 git checkout nombre_rama
+
+Nota: Antes de realizar el merge te debes cambiar a la rama principal o la quieras fusionar
+Realizar Merge
+git merge nombre_rama_a_mezclar
