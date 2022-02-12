@@ -60,6 +60,9 @@ git checkout nombre_rama
 Borrar una rama
 git branch -d nombre_rama
 
+Historial de commit
+git log
+
 Nota: Antes de realizar el merge te debes cambiar a la rama principal o la quieras fusionar
 Realizar Merge
 git merge nombre_rama_a_mezclar
