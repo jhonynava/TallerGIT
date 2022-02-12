@@ -45,3 +45,11 @@ git push nombre_repositorio nombre_rama
 Crear Rama o branch
 git branch nombre_rama
 
+Visualizar ramas locales
+git branch
+
+Visualizar ramas locales y remotas
+git branch -a
+
+Cambiarnos de rama
+git checkout nombre_rama
